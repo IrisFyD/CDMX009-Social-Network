@@ -1,7 +1,6 @@
-import {loginGoogle, createEmailPass} from '../firebase.js';
+import { loginGoogle, loginFB } from '../firebase.js';
 
 export default () => {
-
     const root = document.getElementById('root')
     const viewLogin = `
     <div class="mainConteinerLogin">
@@ -18,21 +17,19 @@ export default () => {
     <a href="#/SignUp">Regístrate</a>
     </div>
     `
-    const divElement = document.createElement('div')
+    const divElement = document.createElement('div');
     divElement.innerHTML = viewLogin;
-    root.appendChild(divElement)
+    root.appendChild(divElement);
 
     // function Log in Google
 
-    const btnGmail = document.querySelector('#btnGmail')
-          btnGmail.addEventListener('click', loginGoogle)
+    const btnLogin = document.querySelector('#btnLogin');
+      btnLogin.addEventListener('click', loginUserEmail);
 
-/* button create out of templete view Login
-  const button = document.createElement('button');
-  button.type = 'button';
-  button.innerText = 'Inicia con google';
-  document.body.appendChild(button);*/
+    const btnGmail = document.querySelector('#btnGmail');
+          btnGmail.addEventListener('click', loginGoogle);
 
- return divElement;
-
+    const btnFB = document.querySelector('#btnFB');
+          btnFB.addEventListener('click', loginFB);
+return divElement;
 }
