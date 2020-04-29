@@ -1,4 +1,4 @@
-import { loginGoogle, loginFB } from '../firebase.js';
+import { loginGoogle, loginFB, loginUserEmail} from '../firebase.js';
 
 export default () => {
     const root = document.getElementById('root')

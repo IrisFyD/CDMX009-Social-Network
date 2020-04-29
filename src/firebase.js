@@ -69,4 +69,32 @@ function saveDataUser(user){
   })
   };
 
-export  { loginGoogle, loginFB, registerUser };
+
+  //User login
+
+  function loginUser(email, password){
+    firebase.auth().signInWithEmailAndPassword(email, password).then(function(user){
+      window.open('#/', '_self');
+    }).catch(function(error) {
+      var errorCode = error.code;
+      var errorMessage = error.message;
+    });
+  }
+
+  function loginUserEmail(){
+    const email = document.getElementById("e-mail").value;
+    const password = document.getElementById("password").value;
+  
+    loginUser(email, password);
+  }
+
+  function signOff(){
+    firebase.auth().signOut().then(function() {
+      window.open('#/login', '_self');
+    }).catch(function(error) {
+    });
+    
+  }
+
+
+export  { loginGoogle, loginFB, registerUser, loginUserEmail, signOff};

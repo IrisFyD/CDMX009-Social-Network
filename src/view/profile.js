@@ -1,4 +1,8 @@
+import {signOff} from '../firebase.js';
+
+
 export default () => {
+    const root = document.getElementById('root')
     const userName = "Humpty Alexander Dumpty";
     const student = "Gato con botas";
     const school = "Escuela de la vida";
@@ -9,6 +13,7 @@ export default () => {
     const likeCount ="15";
     const answers ="";
     const viewProfile = `
+    <button id="logOut" class="btnLogOut">Cerrar Sesión</button>
     <section class="userNamePhoto">
       <div>
           <img src="img/User.svg">
@@ -43,9 +48,18 @@ export default () => {
     </div>
   </section>
     `
+
     
   
+
     const divElement = document.createElement('div')
     divElement.innerHTML = viewProfile;
+    root.appendChild(divElement);
+
+    const btnLogOut = document.querySelector('#logOut');
+    btnLogOut.addEventListener('click', signOff);
+
     return divElement;
+
+    
   }
