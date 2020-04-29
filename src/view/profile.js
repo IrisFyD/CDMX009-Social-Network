@@ -41,14 +41,11 @@ export default () => {
               <p>Comentarios${answers}</p>
           </div>
     </div>
-      </div>
-    </section>
+  </section>
     `
     
   
     const divElement = document.createElement('div')
     divElement.innerHTML = viewProfile;
-  
     return divElement;
   }
-

@@ -1,5 +1,4 @@
 export default () => {
-  const root = document.getElementById('root')
   const viewCalendar = `
     <h2 class="titleCalendar"> CALENDARIO </h2>
     <div class="mainConteinerCalendar">

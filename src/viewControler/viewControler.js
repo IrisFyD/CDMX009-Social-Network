@@ -10,8 +10,7 @@ const changeView = (route) => {
   switch (route) {
     case "#/": {
       header.appendChild(components.Header());
-      root.appendChild(components.Home());
-      return footer.appendChild(components.Footer());
+      return root.appendChild(components.Home());
     }
     case "": {
       root.appendChild(components.Splash());
@@ -37,12 +36,10 @@ const changeView = (route) => {
       return footer.appendChild(components.Footer());
     }
     case "#/login": {
-      root.appendChild(components.Login());
-      return footer.appendChild(components.Footer());
+      return root.appendChild(components.Login());
     }
     case "#/SignUp": {
-      root.appendChild(components.SignUp());
-      return footer.appendChild(components.Footer());
+      return root.appendChild(components.SignUp());
     }
     case "#/profile": {
       header.appendChild(components.Header());
