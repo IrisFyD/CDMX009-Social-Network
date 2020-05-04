@@ -53,6 +53,13 @@ export default () => {
           <div class="sectionLikes">
           <p class="nroLikes">0<img class="imgLikes" src="img/like.svg" /></p>
           </div>
+               <p>Comentarios${answers}</p>
+          </div>
+          <div class="likes">
+              <img src="img/like.svg">${likeCount}
+          </div>
+    </div>
+    </div>
     </div>
     </div>
     </div>
